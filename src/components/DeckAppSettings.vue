@@ -131,12 +131,11 @@ export default {
 		federationEnabled: {
 			get() {
 				const value = this.$store.getters.config('federationEnabled')
-				console.log(value)
 				return value
 			},
 			set(newValue) {
 				confirmPassword().then(() => {
-					this.$store.dispatch('setConfig', { federationEnabled: newValue })
+					this.$store.dispatch('setConfig', { federationEnabled: newValue ? 'yes' : 'no' })
 				})
 			},
 		},

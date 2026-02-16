@@ -12,6 +12,7 @@ use OCP\IConfig;
 use OCP\IUserSession;
 use OCP\L10N\IFactory;
 use Psr\Log\LoggerInterface;
+use SensitiveParameter;
 
 class DeckFederationProxy {
 	public function __construct(
